@@ -26,10 +26,10 @@ import gt.edu.umg.gallery_and_memories.models.PhotoItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button bntSaludo,btndoxeo, btnfoto;
-    TextView tvSaludo, lastPhotoDescription, lastPhotoDate;
-    ImageView lastPhotoImage;
-    DatabaseHelper dbHelper;
+    private Button btnfoto;
+    private TextView tvSaludo, lastPhotoDescription, lastPhotoDate;
+    private ImageView lastPhotoImage;
+    private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupClickListeners() {
-        bntSaludo.setOnClickListener(v -> {
-            Toast.makeText(this, "¡Saludos!", Toast.LENGTH_SHORT).show();
-            tvSaludo.setText("Bienvenido usuario nuevo");
-        });
-
 
         btnfoto.setOnClickListener(v -> {
             Intent intent = new Intent(this, GaleriaActivity.class);
@@ -80,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     public void showCredits(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Créditos");
-        builder.setMessage("Aplicación desarrollada por:\n- Melki Bladimir Ortiz Martinez\n- Tulio Rene Alejandro Quintana Mezquita\n- Luke Skywalker");
+        builder.setMessage("Aplicación desarrollada por:\n- Melki Bladimir Ortiz Martinez\n- Tulio Rene Alejandro Quintana Amezquita\n- Luke Skywalker");
         builder.setPositiveButton("OK", null);
         builder.show();
     }
