@@ -43,7 +43,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
         try {
             holder.imageView.setImageURI(Uri.parse(photo.getUri()));
         } catch (Exception e) {
-            holder.imageView.setImageResource(R.drawable.troleohelmado);
+            holder.imageView.setImageResource(R.drawable.kirbyviajero);
         }
 
         // Configurar los textos

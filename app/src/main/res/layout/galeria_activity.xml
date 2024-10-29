@@ -5,68 +5,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FFF8F0">
+    android:background="#87CEEB">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
-        android:layout_marginBottom="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="12dp"
-            android:background="#FFF5EB">
-
-            <Button
-                android:id="@+id/btnRegresar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Regresar"
-                android:textColor="#5D4037"
-                android:backgroundTint="#E6D5C3"
-                android:padding="12dp"
-                android:elevation="2dp"
-                android:textStyle="bold"
-                app:cornerRadius="8dp"/>
-
-            <Button
-                android:id="@+id/captureButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="📸 Tomar Foto"
-                android:textColor="#5D4037"
-                android:backgroundTint="#DEC5A7"
-                android:layout_marginTop="8dp"
-                android:padding="12dp"
-                android:elevation="2dp"
-                android:textStyle="bold"
-                app:cornerRadius="8dp"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F0F8FF"
         android:layout_marginBottom="16dp">
 
         <EditText
             android:id="@+id/photoDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripción de la foto..."
+            android:hint="Describe tu viaje..."
             android:inputType="textMultiLine"
             android:minLines="2"
             android:maxLines="4"
             android:padding="16dp"
-            android:background="#FFF5EB"
-            android:textColorHint="#8D6E63"
-            android:textColor="#5D4037"/>
+            android:background="#FFFFFF"
+            android:textColorHint="#A7C5EB"
+            android:textColor="#87CEEB"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -75,6 +35,7 @@
         android:layout_weight="1"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
+        app:cardBackgroundColor="#F0F8FF"
         android:layout_marginBottom="16dp">
 
         <ImageView
@@ -83,7 +44,7 @@
             android:layout_height="match_parent"
             android:contentDescription="Preview de la foto"
             android:scaleType="centerCrop"
-            android:background="#F5E6D3"/>
+            android:background="#E8EFF6"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -92,32 +53,79 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:padding="12dp"
-        android:background="#FFF5EB"
-        android:textColor="#5D4037"
+        android:background="#F8F9FA"
+        android:textColor="#87CEEB"
         android:elevation="2dp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="📷 Fotos recientes"
+        android:text="📷 TUS VIAJES :)"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:textColor="#8D6E63"
-        android:padding="8dp"/>
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:background="#B0E2FF"
+        android:elevation="2dp"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="8dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="120dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F0F8FF"
+        android:layout_marginBottom="16dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/photoRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp"
-            android:background="#FFF5EB"/>
+            android:background="#FFFFFF"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#F0F8FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#FFFFFF">
+
+            <Button
+                android:id="@+id/captureButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📸 Tomar Foto"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B0E2FF"
+                android:padding="12dp"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"/>
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:textColor="#87CEEB"
+                android:backgroundTint="#FFE5B4"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

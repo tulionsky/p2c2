@@ -1,6 +1,5 @@
 package gt.edu.umg.gallery_and_memories;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,13 +21,12 @@ import java.util.List;
 import gt.edu.umg.gallery_and_memories.database.DatabaseHelper;
 import gt.edu.umg.gallery_and_memories.galeria.EasterEggActivity;
 import gt.edu.umg.gallery_and_memories.galeria.GaleriaActivity;
-import gt.edu.umg.gallery_and_memories.gps.GpsActivity;
 import gt.edu.umg.gallery_and_memories.models.PhotoItem;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Button bntSaludo,btndoxeo, btnselfi;
+    Button bntSaludo,btndoxeo, btnfoto;
     TextView tvSaludo, lastPhotoDescription, lastPhotoDate;
     ImageView lastPhotoImage;
     DatabaseHelper dbHelper;
@@ -51,10 +49,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
-        bntSaludo = findViewById(R.id.btnSaludo);
         tvSaludo = findViewById(R.id.tvSaludo);
-        btndoxeo = findViewById(R.id.btndoxeo);
-        btnselfi = findViewById(R.id.btnselfi);
+        btnfoto = findViewById(R.id.btnfoto);
         lastPhotoImage = findViewById(R.id.lastPhotoImage);
         lastPhotoDescription = findViewById(R.id.lastPhotoDescription);
         lastPhotoDate = findViewById(R.id.lastPhotoDate);
@@ -66,13 +62,8 @@ public class MainActivity extends AppCompatActivity {
             tvSaludo.setText("Bienvenido usuario nuevo");
         });
 
-        btndoxeo.setOnClickListener(view -> {
-            Intent intent = new Intent(this, GpsActivity.class);
-            startActivity(intent);
-            Toast.makeText(this, "¡TE DOXEO MI LOCO!", Toast.LENGTH_SHORT).show();
-        });
 
-        btnselfi.setOnClickListener(v -> {
+        btnfoto.setOnClickListener(v -> {
             Intent intent = new Intent(this, GaleriaActivity.class);
             startActivity(intent);
         });
@@ -110,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 lastPhotoImage.setImageURI(Uri.parse(lastPhoto.getUri()));
             } catch (Exception e) {
-                lastPhotoImage.setImageResource(R.drawable.troleohelmado);
+                lastPhotoImage.setImageResource(R.drawable.kirby);
             }
 
             // Mostrar la descripción
